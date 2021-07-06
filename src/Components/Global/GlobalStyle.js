@@ -31,6 +31,10 @@ body{
     font-family: faFont,enFont;
 }
 
+.alice-carousel__stage-item{
+    padding: 14rem 0;
+}
+
 `;
 
 export default GlobalStyle;
