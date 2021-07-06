@@ -46,6 +46,7 @@ max-width: 90%;
 font-size: 1rem;
 font-weight: 900;
 color: #9a9a9a;
+direction: rtl;
 `;
 
 //carousel setup
