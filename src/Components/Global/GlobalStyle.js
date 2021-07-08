@@ -35,6 +35,11 @@ body{
     padding: 14rem 0;
 }
 
+.invalid-inp{
+filter: drop-shadow(0 0 2px #e63946);
+transition: filter .3s linear;
+}
+
 `;
 
 export default GlobalStyle;

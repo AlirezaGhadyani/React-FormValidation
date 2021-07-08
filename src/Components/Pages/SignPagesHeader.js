@@ -13,6 +13,8 @@ justify-content: space-between;
 align-items: center;
 padding: .5rem .4rem;
 border-bottom: 1px solid #acacac;
+background: #ffffff;
+z-index: 1000;
 
 & a{
     font-size: 2.4rem;
