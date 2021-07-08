@@ -1,9 +1,10 @@
-import React from 'react';
+import React,{useState} from 'react';
 import styled from 'styled-components';
 import SignPagesHeader from '../SignPagesHeader';
 import TextField from '../TextField';
 import { Formik, Form } from 'formik';
 import * as yup from 'yup';
+import SuccessMessage from '../SuccessMessage';
 
 const SignUpContainer = styled.section`
 width: 1280px;
@@ -57,6 +58,7 @@ cursor: pointer;
 `;
 
 const SignUpPage = () => {
+    const [successStatus, setSuccessStatus] = useState( false );
     const validate = yup.object( {
         firstName: yup.string()
             .max( 15, 'باید 15 کاراکتر یا کمتر باشد' )
@@ -78,6 +80,7 @@ const SignUpPage = () => {
             .required( 'لطفا رمز خود را دوباره وارد کنید' )
     } );
     return (
+        <>
         <SignUpContainer>
             <SignPagesHeader PageType="ثبت نام" />
             <Formik initialValues={{
@@ -89,7 +92,10 @@ const SignUpPage = () => {
                 confirmPassword: ''
             }}
                 validationSchema={validate}
-                onSubmit={values => console.log( values )}>
+                onSubmit={values => {
+                    console.log( values );
+                    setSuccessStatus(true);
+                    }}>
 
                 {formik => (
                     <FormWrapper>
@@ -109,6 +115,11 @@ const SignUpPage = () => {
 
             </Formik>
         </SignUpContainer>
+        
+        {successStatus && (
+                <SuccessMessage type="ثبت نام" setSuccessStatus={setSuccessStatus} />
+            )}
+        </>
     )
 }
 

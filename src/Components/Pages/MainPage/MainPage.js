@@ -36,6 +36,13 @@ cursor: pointer;
     transition: opacity .3s linear;
 }
 
+@media (max-width:355px){
+    font-size: 1.2rem;
+    margin: 2rem 0.4rem;
+    padding: 0.4rem 2.2rem;
+}
+
+
 & a{
     color: ${props => props.primary ? '#ffffff' : '#0a58ed'};
 }

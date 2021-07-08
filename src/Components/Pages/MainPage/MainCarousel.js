@@ -14,6 +14,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 user-select: none;
+@media (max-width:460px){
+    margin-top: 1rem;
+}
 `;
 
 const CarouselItemWrapper = styled.div`
@@ -32,21 +35,32 @@ text-align: center;
 const CarouselItem = styled.img`
 width: 16rem;
 max-width: 80%;
+
+@media (max-width:460px){
+    width: 13rem;
+}
 `;
 
 const CarouselItemH2 = styled.h2`
 margin: 1.2rem 0;
 font-size: 1.6rem;
 font-weight: 700;
+@media (max-width:460px){
+    font-size: 1.4rem;
+}
 `;
 
 const CarouselItemP = styled.p`
 width: 580px;
-max-width: 90%;
+max-width: 80%;
 font-size: 1rem;
 font-weight: 900;
 color: #9a9a9a;
 direction: rtl;
+@media (max-width:460px){
+    font-size: .8rem;
+}
+
 `;
 
 //carousel setup
